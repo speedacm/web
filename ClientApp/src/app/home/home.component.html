@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let act of activities">
+    <span class="badge">{{act.fileName}}</span>
+    <div [innerHTML]="act.htmlContent | safeHtml">
+    </div>
+  </li>
+</ul>

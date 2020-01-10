@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let officer of officers">
+    <span class="badge">{{officer.fileName}}</span>
+    <div [innerHTML]="officer.htmlContent | safeHtml">
+    </div>
+  </li>
+</ul>

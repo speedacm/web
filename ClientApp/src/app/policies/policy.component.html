@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let data of policies">
+    <span class="badge">{{data.FileName}}</span>
+    <div [innerHTML]="data.htmlContent | safeHtml">
+    </div>
+  </li>
+</ul>

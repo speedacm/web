@@ -1,0 +1,31 @@
+<div class="nav">
+  <div class="left">
+    <a class="logo" [routerLink]='["/"]' (click)='collapse()'>
+      <img src="../../assets/red-blue.diamond.svg" />
+    </a>
+    <a [routerLink]='["/"]' (click)='collapse()'>
+      <span id="title">&gt;speed|acm</span>
+    </a>
+    <div class="borgar" [ngClass]="{ show: isExpanded }" (click)="toggle()">
+      <!-- https://i.redd.it/x4mf979ugn621.jpg -->
+      <span></span>
+    </div>
+  </div>
+  <div class="right" [ngClass]="{ show: isExpanded }">
+    <a [routerLink]='["/"]' (click)='collapse()'>
+      <span>Home</span>
+    </a>
+    <a [routerLink]='["/sigs"]' (click)='collapse()'>
+      <span>SIGs</span>
+    </a>
+    <a [routerLink]='["/officers"]' (click)='collapse()'>
+      <span>Officers</span>
+    </a>
+    <a [routerLink]='["/policies"]' (click)='collapse()'>
+      <span>Policies</span>
+    </a>
+    <a [routerLink]='["/notes"]' (click)='collapse()'>
+      <span>Minutes</span>
+    </a>
+  </div>
+</div>

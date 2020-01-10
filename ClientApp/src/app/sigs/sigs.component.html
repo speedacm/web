@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let info of infos">
+    <span class="badge">{{info.fileName}}</span>
+    <div [innerHTML]="info.htmlContent | safeHtml">
+    </div>
+  </li>
+</ul>

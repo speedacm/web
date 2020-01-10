@@ -1,0 +1,271 @@
+.nav {
+  background: linear-gradient(to top, var(--acm-red), var(--acm-red) 9px, var(--acm-blue) 10px);
+  font-size: 1.5em;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  --text-color: #ffffff;
+  box-shadow: 0 0 5px 2px rgba(32, 32, 32, 0.3);
+}
+
+  .nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    height: 100%;
+    padding: 0.5em;
+    position: relative;
+    white-space: nowrap;
+  }
+
+    .nav a span {
+      display: block;
+      position: relative;
+      padding: 0 0.5em;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+  .nav img {
+    height: 210%;
+  }
+
+.left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+  .right a:not(:first-child)::before {
+    display: block;
+    position: absolute;
+    left: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.25em;
+    width: 2px;
+    background: var(--text-color);
+  }
+
+  .right a span::after {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    bottom: -4px;
+    height: 4px;
+    width: calc(100% - 1em);
+    border-radius: 2px;
+    background-color: var(--text-color);
+    transition: transform 250ms;
+  }
+
+  .right a:hover span::after,
+  .right a:focus span::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+#title {
+  font-size: 1.5em;
+  padding: 0;
+  font-family: Consolas, 'Lucida Console', monospace;
+}
+
+@keyframes blinky {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  95% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#title::after {
+  content: "";
+  animation: blinky 2s linear infinite;
+  position: absolute;
+  letter-spacing: -0.1em;
+  right: -0.5em;
+  bottom: 0;
+  display: block;
+  background: var(--text-color);
+  width: 0.5em;
+  height: 8px;
+}
+
+/* responsive design */
+
+.nav {
+  flex-direction: column;
+  font-size: 1.25em;
+  height: 75px;
+}
+
+.left {
+  min-height: 100%;
+  width: 100%;
+}
+
+  .left .logo {
+    display: none;
+  }
+
+.right {
+  flex-direction: column;
+  width: 100%;
+  transition: transform 200ms, opacity 100ms;
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+  .right.show {
+    transform: scaleY(1);
+    transition: transform 200ms, opacity 100ms 100ms;
+    opacity: 1;
+  }
+
+  .right a {
+    width: 100%;
+    background: var(--acm-blue);
+  }
+
+    .right a:hover,
+    .right a:focus {
+      background: var(--acm-blue);
+      filter: brightness(110%);
+    }
+
+.borgar {
+  display: block;
+  height: 100%;
+  width: 4em;
+  position: relative;
+
+  --spacing: 12px;
+}
+
+  .borgar:hover,
+  .borgar:focus {
+    background: rgba(255, 255, 255, 0.075);
+  }
+
+  .borgar span,
+  .borgar span::before,
+  .borgar span::after {
+    display: block;
+    background: var(--text-color);
+    height: 3px;
+    width: 2em;
+    position: absolute;
+
+    transition: transform 150ms;
+  }
+
+  .borgar span {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+  }
+
+    .borgar span::before,
+    .borgar span::after {
+      content: "";
+    }
+
+    .borgar span::before {
+      top: calc(0px - var(--spacing));
+    }
+
+    .borgar span::after {
+      bottom: calc(0px - var(--spacing));
+    }
+
+  .borgar.show span {
+    background-color: transparent;
+  }
+
+    .borgar.show span::before {
+      transform: rotate(45deg) translate(calc(var(--spacing) / 1.41), calc(var(--spacing) / 1.41));
+    }
+
+    .borgar.show span::after {
+      transform: rotate(-45deg) translate(calc(var(--spacing) / 1.41), calc(0px - var(--spacing) / 1.41));
+    }
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+  }
+
+  .left {
+    width: auto;
+  }
+
+  .right {
+    flex-direction: row;
+    width: auto;
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+    .right a {
+      background: rgba(255, 255, 255, 0);
+    }
+
+      .right a:hover,
+      .right a:focus {
+        filter: none;
+        background: rgba(255, 255, 255, 0.075);
+      }
+
+      .right a:not(:first-child)::before {
+        content: "";
+      }
+
+      .right a span::after {
+        content: "";
+      }
+
+  .borgar {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav {
+    font-size: 1.5em;
+    height: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .left .logo {
+    display: block;
+  }
+}

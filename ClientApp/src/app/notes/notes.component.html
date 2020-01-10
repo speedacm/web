@@ -1,0 +1,8 @@
+
+<ul>
+  <li *ngFor="let data of note">
+    <span class="badge">{{data.FileName}}</span>
+    <div [innerHTML]="data.htmlContent | safeHtml">
+    </div>
+  </li>
+</ul>

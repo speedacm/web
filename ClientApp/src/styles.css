@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100%;
+  --acm-blue: #00436c;
+  --acm-red: #6b0000;
+}
+
+body {
+  margin: 0;
+  background: #cccccc;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* responsive design */
+
+.container {
+  max-width: 100%;
+  margin: auto;
+}
+
+@media (min-width: 576px)
+{
+
+}
+
+@media (min-width: 768px)
+{
+
+}
+
+@media (min-width: 992px)
+{
+
+}
+
+@media (min-width: 1200px)
+{
+  .container {
+    max-width: 1024px;
+  }
+}

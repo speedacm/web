@@ -1,0 +1,32 @@
+<div class='app-footer'>
+  <div class="sponsors">
+    <a href="https://acm.org/">
+      <img src="../../assets/acmLogo.png" />
+    </a>
+    <a href="https://louisville.edu">
+      <img src="../../assets/ul-short.png" />
+    </a>
+  </div>
+  <div class="locations">
+    <h4>Locations:</h4>
+    <p>
+      JS LL02 - ACM Lab <br />
+      JS LL01 - ACM Fishbowl
+    </p>
+  </div>
+  <div>
+    <h4>Contact:</h4>
+    <p>
+      <a href="mailto:president@speedacm.org">president@speedacm.org</a> <br />
+      <a href="mailto:moea@speedacm.org">moea@speedacm.org</a>
+    </p>
+  </div>
+  <div class="cam" (mouseenter)="camEnter()" (mouseleave)="camLeave()">
+    <a href="http://cam.speedacm.org/">
+      <img [src]="'http://cam.speedacm.org/image/cam.jpeg?date=' + time" />
+    </a>
+  </div>
+  <div class="dillo">
+    <img src="../../assets/armadillo.png" />
+  </div>
+</div>
