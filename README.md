@@ -4,8 +4,8 @@ This repo is the official repository for the website of the University of Louisv
 
 ## Contributers
 
-Luke Samuel
-Luke Floden
-Cameron Zingg
-Akash Nayak
-Karen Nguyen
+- Luke Samuel
+- Luke Floden
+- Cameron Zingg
+- Akash Nayak
+- Karen Nguyen
