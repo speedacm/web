@@ -68,8 +68,7 @@
     transition: transform 250ms;
   }
 
-  .right a:hover span::after,
-  .right a:focus span::after {
+  .right a:hover span::after {
     transform: translateX(-50%) scaleX(1);
   }
 
@@ -240,6 +239,7 @@
       .right a:hover,
       .right a:focus {
         filter: none;
+        outline: none;
         background: rgba(255, 255, 255, 0.075);
       }
 
