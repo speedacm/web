@@ -1,7 +1,28 @@
-<ul>
-  <li *ngFor="let act of activities">
-    <span class="badge">{{act.fileName}}</span>
-    <div [innerHTML]="act.htmlContent | safeHtml">
-    </div>
-  </li>
-</ul>
+<div class="banner">
+  <h1 class="biggen">Welcome to Speed ACM!</h1>
+  <p>
+    Speed ACM is the University of Louisville Student Chapter of the Association of Computing Machinery, sponsored by the Computer Science and Engineering department.
+    We are the Registered Student Organization (RSO) dedicated to everything computing.
+    The ACM is <strong>open to students and alumni of all majors and disciplines</strong> across campus.
+    The one thing that all members have in common is an interest in technology.
+  </p>
+  <!--<a class="more" href="javascript:void(0)" (click)="showMore()">Show More...</a>-->
+  <p>
+    Our lab is located in the basement of the J.B. Speed Building in room LL02.
+    Members receive access to the lab via door code.
+    The lab is a great place to hang out on campus; with plenty of table space, a large couch, TV, and a snack shop.
+    We have tons of games, and resources for your education; including a printer, servers, textbooks, and even a 3D printer!
+  </p>
+  <p>
+    The ACM regularly hosts various types of events such as workshops and LAN parties.
+    More experienced members organize <a [routerLink]="['/sigs']">Special Interest Groups (SIGs)</a> and host weekly meetings regarding specific computing topics.
+  </p>
+</div>
+
+<div class="events">
+  <h1 class="biggen">Upcoming Events</h1>
+
+  <div class="event" *ngFor="let act of activities">
+    <div [innerHTML]="act.htmlContent | safeHtml"></div>
+  </div>
+</div>

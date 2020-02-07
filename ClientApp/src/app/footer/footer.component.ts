@@ -11,6 +11,7 @@ export class FooterComponent implements OnInit {
     private handle?: number = null;
 
     ngOnInit(): void {
+        (window as any).dillo = () => document.getElementsByClassName('dillo').item(0).classList.add('show');
         (window as any).easterEgg = () => (window.location as any) = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
         this.time = new Date();
     }

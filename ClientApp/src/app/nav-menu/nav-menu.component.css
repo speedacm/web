@@ -60,7 +60,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%) scaleX(0);
-    bottom: -4px;
+    bottom: -8px;
     height: 4px;
     width: calc(100% - 1em);
     border-radius: 2px;

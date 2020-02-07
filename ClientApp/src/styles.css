@@ -9,13 +9,28 @@
   --acm-red: #6b0000;
 }
 
+@keyframes blink {
+  0% {
+    opacity: 1.0;
+  }
+
+  100% {
+    opacity: 0.0;
+  }
+}
+
 body {
   margin: 0;
   background: #cccccc;
   height: 100%;
 }
 
+.blinky {
+  animation: blink 1s ease-in-out alternate-reverse infinite;
+}
+
 a {
+  color: #00436c;
   text-decoration: none;
 }
 
